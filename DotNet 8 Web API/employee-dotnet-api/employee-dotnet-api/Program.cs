@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(option => option.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
+builder.Services.AddScoped<EmployeeRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
